@@ -1,12 +1,21 @@
 "use client";
-import { FroalaOptions } from "froala-editor";
-import "froala-editor/css/froala_editor.css";
-import FroalaEditorComponent from "react-froala-wysiwyg";
 
-export default function FroalaEditor() {
+import { FroalaOptions } from "froala-editor";
+import FroalaEditorComponent from "react-froala-wysiwyg";
+import "froala-editor/css/froala_editor.css";
+import "./plugins/instype-char-counter.js";
+
+export default function Editor() {
   const config: Partial<FroalaOptions> = {
     editorClass: "rounded-xs overflow-hidden",
     toolbarButtons: {},
+    pluginsEnabled: ["instypeCharCounter"],
+    events: {
+      "instype.charCounter.update": (count: number) => {
+        console.log(count);
+      },
+    },
   };
+
   return <FroalaEditorComponent config={config} />;
 }
