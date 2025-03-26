@@ -4,6 +4,7 @@ import { FroalaOptions } from "froala-editor";
 import FroalaEditorComponent from "react-froala-wysiwyg";
 import "froala-editor/css/froala_editor.css";
 import "./plugins/instype-char-counter.js";
+import { postBridgeMessage } from "./postBridgeMessage";
 
 export default function Editor() {
   const config: Partial<FroalaOptions> = {
@@ -12,7 +13,7 @@ export default function Editor() {
     pluginsEnabled: ["instypeCharCounter"],
     events: {
       "instype.charCounter.update": (count: number) => {
-        console.log(count);
+        postBridgeMessage("onCharCountChange", count);
       },
     },
   };
