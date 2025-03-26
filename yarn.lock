@@ -1960,6 +1960,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"froala-editor@npm:4.5.0, froala-editor@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "froala-editor@npm:4.5.0"
+  checksum: 10c0/695986d032c05874c7587f58e9f7ef3156d9b57b8f66fee8b6b272ed70c94768a08e10232ca957b96ecada669dabe7c1f806c129ef818f331d150ee67c17496a
+  languageName: node
+  linkType: hard
+
 "function-bind@npm:^1.1.2":
   version: 1.1.2
   resolution: "function-bind@npm:1.1.2"
@@ -2185,9 +2192,11 @@ __metadata:
     eslint: "npm:^9"
     eslint-config-next: "npm:15.2.4"
     eslint-config-prettier: "npm:^10.1.1"
+    froala-editor: "npm:^4.5.0"
     next: "npm:15.2.4"
     react: "npm:^19.0.0"
     react-dom: "npm:^19.0.0"
+    react-froala-wysiwyg: "npm:^4.5.0"
     tailwindcss: "npm:^4"
     typescript: "npm:^5"
   languageName: unknown
@@ -3094,6 +3103,18 @@ __metadata:
   peerDependencies:
     react: ^19.0.0
   checksum: 10c0/a36ce7ab507b237ae2759c984cdaad4af4096d8199fb65b3815c16825e5cfeb7293da790a3fc2184b52bfba7ba3ff31c058c01947aff6fd1a3701632aabaa6a9
+  languageName: node
+  linkType: hard
+
+"react-froala-wysiwyg@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "react-froala-wysiwyg@npm:4.5.0"
+  dependencies:
+    froala-editor: "npm:4.5.0"
+  peerDependencies:
+    react: ~0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+    react-dom: ~0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/93c391c7c0dc26e663d9fa62492d62e0bd0380ae134b2f7d52d22b10c017bf381d299bd974db30cfb601810f7484f6152bdfd850f2eb92a0df8fc6e792493f9a
   languageName: node
   linkType: hard
 
